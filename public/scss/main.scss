@@ -98,13 +98,6 @@ body {
   }
 }
 
-.card {
-  /* Your existing card styles */
-
-  /* Apply the animation to the card */
-  animation: slideIn 0.5s ease-in-out;
-}
-
 // card-secion part scss //
 .card-section {
   display: flex;
@@ -117,7 +110,7 @@ body {
     position: relative;
     overflow: hidden;
 	margin-bottom:20px;
-	
+	animation: slideIn 0.5s ease-in-out;
 	
 	
     .card-content {
@@ -130,7 +123,7 @@ body {
         .control-system {
           position: absolute;
           top: 7%;
-          right: -278px;
+          right: -258px;
           display: flex;
           width: 300px;
           height: 80px;
@@ -256,3 +249,17 @@ body {
 
 
 
+@media only screen and (max-width: 600px) {
+  .card-section {
+    margin:0px;
+  }
+  
+  .card-section .card .card-content .card-content-text p{
+	  font-size:13px;
+  }
+  
+  .card-section .card .card-content .card-content-text .rating-item h6 {
+		
+	font-size:14px;
+  }
+}
