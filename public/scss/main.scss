@@ -85,6 +85,24 @@ body {
   }
 }
 
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.card {
+  /* Your existing card styles */
+
+  /* Apply the animation to the card */
+  animation: slideIn 0.5s ease-in-out;
+}
+
 // card-secion part scss //
 .card-section {
   display: flex;
@@ -97,6 +115,8 @@ body {
     position: relative;
     overflow: hidden;
 	margin-bottom:20px;
+	
+	
 	
     .card-content {
       .card-side {

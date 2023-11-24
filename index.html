@@ -24,12 +24,18 @@ class JSONReader {
       const jsonData = await response.json();
 
       // Process each item in JSON
+      let delay = 100; // initial delay
       jsonData.forEach(item => {
         // Assuming your Card class is defined elsewhere
         const card = new Card(item);
 
-        // Append card to the container
-        $('.card-section').append(card.toHTML());
+        // Append card to the container with a delay
+        setTimeout(function () {
+          $('.card-section').append(card.toHTML());
+        }, delay);
+
+        // Increase the delay for the next card
+        delay += 100; // adjust the delay as needed
       });
     } catch (error) {
       console.error('Error fetching or parsing JSON:', error);
@@ -142,7 +148,7 @@ class JSONReader {
     toHTML() {
     // Convert card data to HTML and return
     return `
-      <div class="card card-${this.getColor()}-text-bg">
+      <div class="card fadeIn card-${this.getColor()}-text-bg">
         <div class="card-content">
           <div class="card-side card-${this.getColor()}-bg">
             <div class="control-system card-${this.getColor()}-bg">
