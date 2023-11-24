@@ -1,0 +1,221 @@
+/** @format */
+
+// common scss //
+
+* {
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+  //   max-width: 100%;
+  //   height: auto;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+h6,
+p {
+  margin-bottom: 0;
+}
+.btn {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+// card color control
+
+.card {
+  // teal theme
+  &-teal {
+    &-bg {
+      background-color: #008083;
+    }
+    &-text-bg {
+      background-color: #b0d1d2;
+    }
+  }
+
+  // orange theme
+  &-orange {
+    &-bg {
+      background-color: #e56130;
+    }
+    &-text-bg {
+      background-color: #d1c6c3;
+    }
+  }
+
+  // green theme
+  &-green {
+    &-bg {
+      background-color: #51ac47;
+    }
+    &-text-bg {
+      background-color: #bdd7bb;
+    }
+  }
+
+  // Pink theme
+  &-pink {
+    &-bg {
+      background-color: #e86097;
+    }
+    &-text-bg {
+      background-color: #d2bac3;
+    }
+  }
+}
+
+// card-secion part scss //
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 100px;
+  .card {
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+    .card-content {
+      .card-side {
+        height: 100%;
+        width: 35px;
+        z-index: 1;
+        position: absolute;
+
+        .control-system {
+          position: absolute;
+          top: 7%;
+          right: -144px;
+          display: flex;
+          width: 158px;
+          height: 40px;
+          border-radius: 10px;
+          align-items: center;
+          h5 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            width: 26px;
+            height: 26px;
+            margin-right: 5px;
+            border-radius: 50%;
+          }
+          span {
+            font-size: 8px;
+            color: #ffffff;
+          }
+        }
+        .gc {
+          position: absolute;
+          top: 24%;
+          right: -18px;
+          width: 35px;
+          height: 22px;
+          padding: 3px;
+          border-radius: 5px;
+          h5 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            border-radius: 5px;
+            height: 100%;
+          }
+        }
+        .icon {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          display: flex;
+          right: -10px;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+
+          span {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: #ffffff;
+          }
+          &.icon-1 {
+            bottom: 54%;
+          }
+          &.icon-2 {
+            bottom: 36%;
+          }
+          &.icon-3 {
+            bottom: 22%;
+          }
+          &.icon-4 {
+            bottom: 8%;
+          }
+        }
+      }
+      .card-conent-img {
+        height: 145px;
+        background-color: #ffffff;
+      }
+      .card-content-text {
+        position: relative;
+        padding: 12px 10px 10px 50px;
+        p {
+          font-size: 8px;
+          margin-bottom: 15px;
+        }
+        .rating {
+          top: -44px;
+          position: absolute;
+          right: 16px;
+          &-item {
+            height: 16px;
+            width: 95px;
+            padding: 0px 5px;
+            margin-bottom: 2px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h6 {
+              color: #ffffff;
+              font-size: 10px;
+              flex-shrink: 0;
+              font-weight: 600;
+            }
+            .rating-icon {
+              width: 100%;
+              display: flex;
+              justify-content: end;
+              align-items: center;
+              img {
+                width: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
