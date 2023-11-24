@@ -91,116 +91,128 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 100px;
+  
   .card {
-    width: 200px;
+    width: 400px;
     position: relative;
     overflow: hidden;
+	margin-bottom:20px;
+	
     .card-content {
       .card-side {
         height: 100%;
-        width: 35px;
+        width: 70px;
         z-index: 1;
         position: absolute;
 
         .control-system {
           position: absolute;
           top: 7%;
-          right: -144px;
+          right: -278px;
           display: flex;
-          width: 158px;
-          height: 40px;
+          width: 300px;
+          height: 80px;
           border-radius: 10px;
           align-items: center;
           h5 {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 15px;
-            width: 26px;
-            height: 26px;
+            font-size: 30px;
+            width: 52px;
+            height: 52px;
             margin-right: 5px;
             border-radius: 50%;
           }
           span {
-            font-size: 8px;
+            font-size: 16px;
             color: #ffffff;
           }
         }
         .gc {
           position: absolute;
           top: 24%;
-          right: -18px;
-          width: 35px;
-          height: 22px;
-          padding: 3px;
+          right: -38px;
+          width: 70px;
+          height: 44px;
+          padding: 6px; 
           border-radius: 5px;
           h5 {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 15px;
+            font-size: 30px;
             border-radius: 5px;
             height: 100%;
           }
         }
         .icon {
-          width: 30px;
-          height: 30px;
+          width: 60px;
+          height: 60px;
           border-radius: 50%;
           display: flex;
-          right: -10px;
+          right: -24px;
           align-items: center;
           justify-content: center;
           position: absolute;
 
           span {
-            width: 25px;
-            height: 25px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             display: inline-block;
             background-color: #ffffff;
           }
           &.icon-1 {
-            bottom: 54%;
+            bottom: 53%;
           }
           &.icon-2 {
-            bottom: 36%;
+            bottom: 31%;
           }
           &.icon-3 {
-            bottom: 22%;
+            bottom: 18%;
           }
           &.icon-4 {
-            bottom: 8%;
+            bottom: 4%;
           }
+		  
+		  &.icon-hidden{
+			  display:none;
+		  }
+		  
         }
       }
       .card-conent-img {
-        height: 145px;
+        height: 270px;
         background-color: #ffffff;
       }
       .card-content-text {
+		height:250px;
         position: relative;
-        padding: 12px 10px 10px 50px;
+        padding: 24px 20px 20px 100px;
+		
         p {
-          font-size: 8px;
-          margin-bottom: 15px;
+          font-size: 16px;
+		  font-weight:500;
+          margin-bottom: 30px;
         }
+		
         .rating {
-          top: -44px;
+          top: -87px;
           position: absolute;
           right: 16px;
           &-item {
-            height: 16px;
-            width: 95px;
-            padding: 0px 5px;
-            margin-bottom: 2px;
-            border-radius: 5px;
+            height: 32px;
+            width: 190px;
+            padding: 0px 10px;
+            margin-bottom: 4px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             h6 {
               color: #ffffff;
-              font-size: 10px;
+              font-size: 20px;
               flex-shrink: 0;
               font-weight: 600;
             }
@@ -210,7 +222,7 @@ body {
               justify-content: end;
               align-items: center;
               img {
-                width: 10px;
+                width: 20px;
               }
             }
           }
