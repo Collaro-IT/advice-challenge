@@ -256,15 +256,16 @@ $(document).ready(function() {
 	
 	$('#searchBox').on('input', function () {
 		cardReader.filters.searchText = $(this).val();
+		alert();
 		cardReader.loadCards();
 	});
 	
-	$('.sectorFiler').change(function () {
+	$('.sectorFilter').change(function () {
 		// Create an array to store selected sectors
 		const selectedSectors = [];
 		
 		// Loop through all checkboxes and add selected sectors to the array
-		$('.sectorFiler:checked').each(function () {
+		$('.sectorFilter:checked').each(function () {
 			selectedSectors.push($(this).val());
 		});
 
@@ -313,22 +314,22 @@ $(document).mouseup(function(e){
         <h3>Sector</h3>
 
         <div class="form-check form-switch mb-2">
-          <input class="form-check-input energy-checkbox sectorFiler" type="checkbox" value="energy" role="switch" id="flexSwitchCheckEnergy" checked>
+          <input class="form-check-input energy-checkbox sectorFilter" type="checkbox" value="energy" role="switch" id="flexSwitchCheckEnergy" checked>
           <label class="form-check-label" for="flexSwitchCheckEnergy">Energy</label>
         </div>
 
         <div class="form-check form-switch mb-2">
-          <input class="form-check-input manufacturing-checkbox sectorFiler" type="checkbox" role="switch" value="manufacturing" id="flexSwitchCheckManufacturing" checked>
+          <input class="form-check-input manufacturing-checkbox sectorFilter" type="checkbox" role="switch" value="manufacturing" id="flexSwitchCheckManufacturing" checked>
           <label class="form-check-label" for="flexSwitchCheckManufacturing">Manufacturing</label>
         </div>
 
         <div class="form-check form-switch mb-2">
-          <input class="form-check-input built-environment-checkbox sectorFiler" type="checkbox" value="built environment" role="switch" id="flexSwitchCheckBuiltEnvironment" checked>
+          <input class="form-check-input built-environment-checkbox sectorFilter" type="checkbox" value="built environment" role="switch" id="flexSwitchCheckBuiltEnvironment" checked>
           <label class="form-check-label" for="flexSwitchCheckBuiltEnvironment">Built Environment</label>
         </div>
 
         <div class="form-check form-switch mb-2">
-          <input class="form-check-input agriculture-checkbox sectorFiler" type="checkbox" data-sector="" value="agriculture" role="switch" id="flexSwitchCheckAgriculture" checked>
+          <input class="form-check-input agriculture-checkbox sectorFilter" type="checkbox" data-sector="" value="agriculture" role="switch" id="flexSwitchCheckAgriculture" checked>
           <label class="form-check-label" for="flexSwitchCheckAgriculture">Agriculture</label>
         </div>
       </div>
