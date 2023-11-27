@@ -1,9 +1,4 @@
 
-.form-check-input{
-
-height:30px;
-width:50px !important;
-}
 
 
 .energy-checkbox {
@@ -40,4 +35,48 @@ width:50px !important;
   &:not(:checked) {
     background-color: $green-bg;
   }
+}
+
+
+
+button:focus {
+    outline: none;
+}
+aside {
+    background: #1a1d23;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    transition: 0.3s;
+
+    left: -250px;
+    top: 0;
+    transition-timing-function: cubic-bezier(0.9, 0, 1, 1);
+}
+aside.close {
+    left: 0;
+    transition: 0.3s;
+    transition-timing-function: cubic-bezier(0.9, 0, 1, 1);
+    z-index: 999;
+}
+nav a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    padding: 10px;
+}
+nav a:hover {
+    background: #313640;
+}
+aside button {
+    border: none;
+    background: none;
+    position: absolute;
+    right: -40px;
+    top: 7px;
+    font-size: 30px;
+    transform: rotate(90deg);
+    display: inline-block;
+    cursor: pointer;
+	z-index:99;
 }
