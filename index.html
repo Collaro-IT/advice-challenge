@@ -10,8 +10,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link rel="stylesheet" href="./public/stylesheets/main.css" />
-    <link rel="stylesheet" href="./public/stylesheets/filtering.css" />	
+    <link rel="stylesheet" href="./public/css/style.css" />
 	
 <script>
 class CardReader {
@@ -263,16 +262,14 @@ $(document).ready(function() {
 	$('.sectorFiler').change(function () {
 		// Create an array to store selected sectors
 		const selectedSectors = [];
-
+		
 		// Loop through all checkboxes and add selected sectors to the array
-		$('.category-page-faceted-search-filter-choice:checked').each(function () {
+		$('.sectorFiler:checked').each(function () {
 			selectedSectors.push($(this).val());
 		});
 
 		// Update the sector filter in the cardReader with the selected sectors
 		cardReader.filters.sector = selectedSectors.length > 0 ? selectedSectors : null;
-
-		console.log(cardReader.filters.sector);
 
 		// Load cards with the updated filters
 		cardReader.loadCards();
@@ -290,61 +287,40 @@ $(document).ready(function() {
   <body>
   
   
- 
-<form class="category-page-faceted-search">
-  <div class="category-page-faceted-search-element-container category-page-faceted-search-text-container">
-    <label class="category-page-faceted-search-label" for="searchBox">Search...</label>
-    <input type="text" name="searchBox" id="searchBox" placeholder="" class="category-page-faceted-search-text" />
-  </div>
-  <!--
-  <div class="category-page-faceted-search-element-container category-page-faceted-search-select-container dropdown-container">
-    <label class="category-page-faceted-search-label" for="plant_type">Plant Type</label>
-    <div class="category-page-faceted-search-select-wrapper dropdown-wrap">
-      <input type="text" class="category-page-faceted-search-select-input dropdown" id="plant_type">
-      <span class="category-page-faceted-search-select-toggle-arrow dropdown-trigger" aria-hidden="true" data-trigger="plant_type">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.984 9.984h10.031L11.999 15z"/></svg>
-      </span>
-      <div class="category-page-faceted-search-select-list dropdown-list">
-        <div class="category-page-faceted-search-select-item dropdown-option">Item 1</div>
-        <div class="category-page-faceted-search-select-item dropdown-option">Item 2</div>
-        <div class="category-page-faceted-search-select-item dropdown-option">Item 3</div>
-        <div class="category-page-faceted-search-select-item dropdown-option">Item 4</div>
-        <div class="category-page-faceted-search-select-item dropdown-option">Item 5</div>
-        <div class="category-page-faceted-search-select-item dropdown-option">Item 6</div>
+ <div class="container">
+    <div class="wrapper">
+	
+	  <label class="category-page-faceted-search-label" for="searchBox">Search...</label>
+      <input type="text" name="searchBox" id="searchBox" placeholder="" class="form-control input" />
+	
+      <div class="checkbox-container">
+
+		
+			<div class="form-check form-switch">
+			  <input class="form-check-input energy-checkbox sectorFiler" type="checkbox" value="energy"  role="switch" id="flexSwitchCheckEnergy" checked>
+			  <label class="form-check-label" for="flexSwitchCheckEnergy">Energy</label>
+			</div>
+
+			<div class="form-check form-switch">
+			  <input class="form-check-input manufacturing-checkbox sectorFiler" type="checkbox" role="switch" value="manufacturing" id="flexSwitchCheckManufacturing" checked>
+			  <label class="form-check-label" for="flexSwitchCheckManufacturing">Manufacturing</label>
+			</div>
+
+			<div class="form-check form-switch">
+			  <input class="form-check-input built-environment-checkbox sectorFiler" type="checkbox" value="built environment" role="switch" id="flexSwitchCheckBuiltEnvironment" checked>
+			  <label class="form-check-label" for="flexSwitchCheckBuiltEnvironment">Built Environment</label>
+			</div>
+
+			<div class="form-check form-switch">
+			  <input class="form-check-input agriculture-checkbox sectorFiler" type="checkbox" data-sector="" value="agriculture" role="switch" id="flexSwitchCheckAgriculture" checked>
+			  <label class="form-check-label" for="flexSwitchCheckAgriculture">Agriculture</label>
+			</div>
+
+
       </div>
+
     </div>
   </div>
-  -->
-  <fieldset class="category-page-faceted-search-element-container category-page-faceted-search-filter-container">
-    <legend class="category-page-faceted-search-label" aria-label="Sunlight Amount">Sector</legend>
-    <div class="category-page-faceted-search-filter">
-      <input type="checkbox" checked="checked" name="sectorFilter_Energy" id="sectorFilter_Energy" value="energy" class="sectorFiler category-page-faceted-search-filter-choice category-page-faceted-search-filter-choice-1" /> <label for="sectorFilter_Energy" class="category-page-faceted-search-filter-label">
-	  Energy
-	  </label>
-    </div>
-    <div class="category-page-faceted-search-filter">
-      <input type="checkbox" checked="checked" name="sectorFilter_Manufacturing" id="sectorFilter_Manufacturing" value="manufacturing" class="sectorFiler category-page-faceted-search-filter-choice category-page-faceted-search-filter-choice-2" />
-	  <label for="sectorFilter_Manufacturing" class="category-page-faceted-search-filter-label">
-	   Manufacturing
-      </label>
-    </div>
-    <div class="category-page-faceted-search-filter category-page-faceted-search-filter-last-row">
-      <input type="checkbox" checked="checked" name="sectorFilter_Agriculture" id="sectorFilter_Agriculture" value="agriculture"  class="sectorFiler category-page-faceted-search-filter-choice  category-page-faceted-search-filter-choice-3" />
-	  <label for="sectorFilter_Agriculture" class="category-page-faceted-search-filter-label">
-	  Agriculture
-      </label>
-    </div>
-    <div class="category-page-faceted-search-filter category-page-faceted-search-filter-last-row">
-      <input type="checkbox" checked="checked" name="sectorFilter_BuiltEnvironment" id="sectorFilter_BuiltEnvironment" value="built environment" class="sectorFiler category-page-faceted-search-filter-choice  category-page-faceted-search-filter-choice-4" /> 
-	  <label for="sectorFilter_BuiltEnvironment" class="category-page-faceted-search-filter-label">
-	  Built Environment
-      </label>
-    </div>
-  </fieldset>
-  <div class="category-page-faceted-search-element-container category-page-faceted-search-submit-container">
-    <input type="submit" value="Search" class="category-page-faceted-search-submit" />
-  </div>
-</form> 
   
   <div class="card-section">
   </div>

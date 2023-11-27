@@ -1,0 +1,43 @@
+
+.form-check-input{
+
+height:30px;
+width:50px !important;
+}
+
+
+.energy-checkbox {
+  &:checked {
+    background-color: $teal
+  }
+  &:not(:checked) {
+    background-color: $teal-bg;
+  }
+}
+
+.manufacturing-checkbox {
+  &:checked {
+    background-color: $orange;
+  }
+  &:not(:checked) {
+    background-color: $orange-bg;
+  }
+}
+
+.built-environment-checkbox {
+  &:checked {
+    background-color: $pink;
+  }
+  &:not(:checked) {
+    background-color: $pink-bg;
+  }
+}
+
+.agriculture-checkbox {
+  &:checked {
+    background-color: $green;
+  }
+  &:not(:checked) {
+    background-color: $green-bg;
+  }
+}
