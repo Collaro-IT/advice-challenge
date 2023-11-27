@@ -217,7 +217,7 @@ body {
         background-color: #ffffff;
       }
       .card-content-text {
-		height:220px;
+		height:240px;
         position: relative;
         padding: 24px 20px 20px 100px;
 		
@@ -283,22 +283,69 @@ body {
 
 
 @media only screen and (max-width: 600px) {
-  .card-section {
-    margin:0px;
-  }
-  
-  .card-section .card .card-content .card-content-text p{
-	  font-size:10px;
-  }
-  
-  .card-section .card .card-content .card-content-text .rating-item h6 {
-		
-	font-size:10px;
-  }
-  
-  
-  .category-page-faceted-search-filter-label{
-	  
-	  font-size: 10px;
-  }
+	.card-section {
+		margin:0px;
+		margin-top: 60px;
+
+	}
+	
+	.card-section .card{
+		width:100%;
+	}
+
+	.card-section .card .card-content .card-conent-img{
+		height:19em;
+	}
+
+	.card-section .card .card-content .card-content-text{
+		height:19em;
+	}
+
+	.card-section .card .card-content .card-content-text p {
+	  font-size: 17px;
+	  font-weight: 500;
+	  margin-bottom: 30px;
+	}
+
+	.card-section .card .card-content .card-side .control-system span {
+	  font-size: 20px;
+	}	
+	
+	.card-section .card .card-content .card-side .control-system {
+	  right: -338px;
+	  width: 370px;
+	  height: 85px;
+	}
+	
+
+	.card-section .card .card-content .card-side .icon{
+		width: 58px;
+		height: 58px;
+	}
+	
+	.card-section .card .card-content .card-content-text .rating-item{
+		height:38px;
+	}
+
+	.card-section .card .card-content .card-content-text .rating{
+		top:-103px;
+	}
+
+	.card-section .card .card-content .card-side .gc h5{
+		font-size:24px;
+	}
+
+	.card-section .card .card-content .card-side {
+	  width: 67px;
+	}
+
 }
+
+
+
+
+
+
+
+
+
