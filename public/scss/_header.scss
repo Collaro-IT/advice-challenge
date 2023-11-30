@@ -40,12 +40,12 @@
       border: $headers-bg;
 
       &:checked {
-        background-image: url("/public/assets/Icons/fill-star.svg");
+        background-image: url("public/assets/Icons/fill-star.svg");
         background-color: $headers-bg;
         border: $headers-bg;
       }
       &:not(:checked) {
-        background-image: url("/public/assets/Icons/star.svg");
+        background-image: url("public/assets/Icons/star.svg");
         background-color: $headers-bg;
         border: $headers-bg;
       }
@@ -55,11 +55,11 @@
 		width: 25px;
 		height: 25px;
 		cursor: pointer;
-		background-image: url("/public/assets/Icons/star.svg");
+		background-image: url("public/assets/Icons/star.svg");
 	}
 	
 	.star-checked{
-		 background-image: url("/public/assets/Icons/fill-star.svg") !important;
+		 background-image: url("public/assets/Icons/fill-star.svg") !important;
 	}
 	
 	
