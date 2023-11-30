@@ -370,9 +370,9 @@ $(document).ready(function() {
     // Add click event listener to dynamically added star divs
     $('.scores-filter').on('click', '.star, .all', function() {
         var currentStar = $(this);
-        var starContainer = currentStar.closest('.row').find('.star');
-        var allStar = currentStar.closest('.row').find('.all');
-        var hiddenInput = currentStar.closest('.row').find('input');
+        var starContainer = currentStar.closest('.d-flex ').find('.star');
+        var allStar = currentStar.closest('.d-flex ').find('.all');
+        var hiddenInput = currentStar.closest('.d-flex ').find('input');
 
         if (currentStar.hasClass('all')) {
             // Clicked on the "All" star
