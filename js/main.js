@@ -410,5 +410,11 @@ $(document).ready(function() {
 		$('#toggler').toggleClass("arrow-down");
 		$('#toggler').toggleClass("arrow-up");
 	});
+	
+	
+	
+	
+ $(function () {
+      $('[data-bs-toggle="tooltip"]').tooltip();
+    });
 });
-
