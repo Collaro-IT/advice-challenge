@@ -1,0 +1,48 @@
+ @media only screen and (max-width: 900px) {
+
+
+	#header-content{
+	width: 100% !important;
+	}
+	
+	
+	.sector-filter{
+	
+	min-width: 400px;
+	}
+	
+	.card-section .card {
+		width: 300px !important;
+
+	}
+	
+
+}
+
+@media only screen and (max-width: 600px) {
+
+	.ai-capabilities-filter{
+		  .form-check-label{
+		padding-left: 10px !important;
+	   } 
+	}
+
+
+	#header-content{
+	padding:15px !important;
+	width: 100% !important;
+	}
+	
+	
+	.form-switch{
+	min-width:140px;
+	}
+	
+		.card-section .card {
+		width: 100% !important;
+
+	}
+
+}
+
+

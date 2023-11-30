@@ -15,218 +15,225 @@
   <body>
     <nav id="header" class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div id="header-content">
+          <div class="col-md-12">
+            <div class="row">
+              <img style="width:300px" class="logo" src="./images/advice.png">
+            </div>
+            <div class="row">
+              <label for="searchBox">Search...</label>
+              <input type="text" name="searchBox" id="searchBox" placeholder="" class="form-control input mb-4" />
+            </div>
+          </div>
+        </div>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <div class="row w-100 p-4">
-            <div class="col-md-3">
-              <div class="row">
-                <img style="width:300px" class="logo" src="./images/advice.png">
-              </div>
-              <div class="row">
-                <label for="searchBox">Search...</label>
-                <input type="text" name="searchBox" id="searchBox" placeholder="" class="form-control input mb-4" />
-              </div>
-            </div>
-            <div class="col-md-2">
-				 <div class="container mt-3 sector-filter">
-              <label for="searchBox">Sector</label>
-              <div class="form-check form-switch mb-2">
-                <input class="form-check-input energy-checkbox" type="checkbox" value="energy" role="switch" id="flexSwitchCheckEnergy" checked>
-                <label class="form-check-label" for="flexSwitchCheckEnergy">Energy</label>
-              </div>
-              <div class="form-check form-switch mb-2">
-                <input class="form-check-input manufacturing-checkbox" type="checkbox" role="switch" value="manufacturing" id="flexSwitchCheckManufacturing" checked>
-                <label class="form-check-label" for="flexSwitchCheckManufacturing">Manufacturing</label>
-              </div>
-              <div class="form-check form-switch mb-2">
-                <input class="form-check-input built-environment-checkbox" type="checkbox" value="built environment" role="switch" id="flexSwitchCheckBuiltEnvironment" checked>
-                <label class="form-check-label" for="flexSwitchCheckBuiltEnvironment">Built Environment</label>
-              </div>
-              <div class="form-check form-switch mb-2">
-                <input class="form-check-input agriculture-checkbox" type="checkbox" data-sector="" value="agriculture" role="switch" id="flexSwitchCheckAgriculture" checked>
-                <label class="form-check-label" for="flexSwitchCheckAgriculture">Agriculture</label>
-              </div>
-			  </div>
-            </div>
-            <div class="col-md-2">
-              <div class="container mt-3 scores-filter">
-                <div class="row">
-                  <label for="searchBox">Scores</label>
-                  <div class="row">
-                    <div class="col-md-2">
-                      <div class="mb-2">
-						<div class="all all-checked">All</div>
+          <div class="d-flex flex-wrap w-100">
+            <div id="filter-content">
+              <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <div class="d-flex flex-wrap w-100">
+                    <div class="col-lg-2 col-md-4">
+                      <div class="container mt-3 sector-filter">
+                        <label for="searchBox">Sector</label>
+                        <div class="form-check form-switch mb-2">
+                          <input class="form-check-input energy-checkbox" type="checkbox" value="energy" role="switch" id="flexSwitchCheckEnergy" checked>
+                          <label class="form-check-label" for="flexSwitchCheckEnergy">Energy</label>
+                        </div>
+                        <div class="form-check form-switch mb-2">
+                          <input class="form-check-input manufacturing-checkbox" type="checkbox" role="switch" value="manufacturing" id="flexSwitchCheckManufacturing" checked>
+                          <label class="form-check-label" for="flexSwitchCheckManufacturing">Manufacturing</label>
+                        </div>
+                        <div class="form-check form-switch mb-2">
+                          <input class="form-check-input built-environment-checkbox" type="checkbox" value="built environment" role="switch" id="flexSwitchCheckBuiltEnvironment" checked>
+                          <label class="form-check-label" for="flexSwitchCheckBuiltEnvironment">Built Environment</label>
+                        </div>
+                        <div class="form-check form-switch mb-2">
+                          <input class="form-check-input agriculture-checkbox" type="checkbox" data-sector="" value="agriculture" role="switch" id="flexSwitchCheckAgriculture" checked>
+                          <label class="form-check-label" for="flexSwitchCheckAgriculture">Agriculture</label>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-md-2">
-                      <div class="mb-2">
-                        <div class="star star-checked"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-2">
-                      <div class="mb-2">
-                        <div class="star star-checked"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-2">
-                      <div class="mb-2">
-                        <div class="star star-checked"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <label for="searchBox">Impact</label>
-					  <input class="score" type="hidden" name="Impact" value="all">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-2">
-                      <div class="mb-2">
-						<div class="all all-checked">All</div>
-                      </div>
-                    </div>
-                    <div class="col-md-2">
-                      <div class="mb-2">
-                        <div class="star star-checked"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-2">
-                      <div class="mb-2">
-                        <div class="star star-checked"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-2">
-                      <div class="mb-2">
-                        <div class="star star-checked"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <label for="searchBox">AI Suitability</label>
-					  <input class="score" type="hidden" name="AISuitability" value="all">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-2">
-                      <div class="mb-2">
-						<div class="all all-checked">All</div>
-                      </div>
-                    </div>
-                    <div class="col-md-2">
-                      <div class="mb-2">
-                        <div class="star star-checked"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-2">
-                      <div class="mb-2">
-                        <div class="star star-checked"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-2">
-                      <div class="mb-2">
-                        <div class="star star-checked"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <label for="searchBox">Novelty</label>
-					  <input class="score" type="hidden" name="Novelty" value="all">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-1">
-              <div class="container mt-3 gc-filter">
-                <label for="gradeCombobox" class="form-label">Grand Challange</label>
-                <select class="form-select" id="gradeCombobox">
-                  <option value="all" selected>All</option>
-                  <option value="gc1">GC1</option>
-                  <option value="gc2">GC2</option>
-                  <option value="gc3">GC3</option>
-                  <option value="gc4">GC4</option>
-                  <option value="gc5">GC5</option>
-                  <option value="gc6">GC6</option>
-                  <option value="gc7">GC7</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="container mt-3 ai-capabilities-filter">
-                <div class="row">
-				<label for="searchBox">AI Capabilities</label>
-                  <div class="container mt-3">
-                    <div class="row">
-                      <div class="col-md-6">
+                    <div class="col-lg-3 col-md-4">
+                      <div class="container mt-3 scores-filter">
                         <div class="row">
-                          <div class="col-md-12">
-                            <div class="row">
-                              <div class="col-md-2">
-                                <img src="./images/icons/teal/Geospatial.svg">
-                              </div>
-                              <div class="col-md-10">
-                                <div class="form-check form-switch mb-2">
-                                  <input class="form-check-input sectorFilter" type="checkbox" value="geospatial" role="switch" id="flexSwitchCheckEnergy1" checked>
-                                  <label class="form-check-label" for="flexSwitchCheckEnergy1">Geospatial</label>
-                                </div>
+                          <label for="searchBox">Scores</label>
+                          <div class="d-flex flex-wrap">
+                            <div class="col-md-2 col-sm-4">
+                              <div class="mb-2">
+                                <div class="all all-checked">All</div>
                               </div>
                             </div>
-                            <div class="row">
-                              <div class="col-md-2">
-                                <img src="./images/icons/teal/Optimisation.svg">
-                              </div>
-                              <div class="col-md-10">
-                                <div class="form-check form-switch mb-2">
-                                  <input class="form-check-input sectorFilter" type="checkbox" value="optimisation" role="switch" id="flexSwitchCheckEnergy1" checked>
-                                  <label class="form-check-label" for="flexSwitchCheckEnergy1">Optimisation</label>
-                                </div>
+                            <div class="col-md-2 col-sm-4">
+                              <div class="mb-2">
+                                <div class="star star-checked"></div>
                               </div>
                             </div>
-                            <div class="row">
-                              <div class="col-md-2">
-                                <img src="./images/icons/teal/Language.svg">
+                            <div class="col-md-2 col-sm-4">
+                              <div class="mb-2">
+                                <div class="star star-checked"></div>
                               </div>
-                              <div class="col-md-10">
-                                <div class="form-check form-switch mb-2">
-                                  <input class="form-check-input sectorFilter" type="checkbox" value="language" role="switch" id="flexSwitchCheckEnergy1" checked>
-                                  <label class="form-check-label" for="flexSwitchCheckEnergy1">Language</label>
-                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                              <div class="mb-2">
+                                <div class="star star-checked"></div>
                               </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                              <p>Impact</p>
+                              <input class="score" type="hidden" name="Impact" value="all">
+                            </div>
+                          </div>
+                          <div class="d-flex flex-wrap">
+                            <div class="col-md-2">
+                              <div class="mb-2">
+                                <div class="all all-checked">All</div>
+                              </div>
+                            </div>
+                            <div class="col-md-2">
+                              <div class="mb-2">
+                                <div class="star star-checked"></div>
+                              </div>
+                            </div>
+                            <div class="col-md-2">
+                              <div class="mb-2">
+                                <div class="star star-checked"></div>
+                              </div>
+                            </div>
+                            <div class="col-md-2">
+                              <div class="mb-2">
+                                <div class="star star-checked"></div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <p>AI Suitability</p>
+                              <input class="score" type="hidden" name="AISuitability" value="all">
+                            </div>
+                          </div>
+                          <div class="d-flex flex-wrap">
+                            <div class="col-md-2">
+                              <div class="mb-2">
+                                <div class="all all-checked">All</div>
+                              </div>
+                            </div>
+                            <div class="col-md-2">
+                              <div class="mb-2">
+                                <div class="star star-checked"></div>
+                              </div>
+                            </div>
+                            <div class="col-md-2">
+                              <div class="mb-2">
+                                <div class="star star-checked"></div>
+                              </div>
+                            </div>
+                            <div class="col-md-2">
+                              <div class="mb-2">
+                                <div class="star star-checked"></div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <p>Novelty</p>
+                              <input class="score" type="hidden" name="Novelty" value="all">
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="col-md-6">
+                    </div>
+                    <div class="col-lg-2 col-md-4">
+                      <div class="container mt-3 gc-filter">
+                        <label for="gradeCombobox" class="form-label">Grand Challange</label>
+                        <select class="form-select" id="gradeCombobox">
+                          <option value="all" selected>All</option>
+                          <option value="gc1">GC1</option>
+                          <option value="gc2">GC2</option>
+                          <option value="gc3">GC3</option>
+                          <option value="gc4">GC4</option>
+                          <option value="gc5">GC5</option>
+                          <option value="gc6">GC6</option>
+                          <option value="gc7">GC7</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-5 col-md-4">
+                      <div class="container mt-3 ai-capabilities-filter">
                         <div class="row">
-                          <div class="row">
-                            <div class="col-md-2">
-                              <img src="./images/icons/teal/Visual.svg">
-                            </div>
-                            <div class="col-md-10">
-                              <div class="form-check form-switch mb-2">
-                                <input class="form-check-input sectorFilter" type="checkbox" value="visual" role="switch" id="flexSwitchCheckEnergy1" checked>
-                                <label class="form-check-label" for="flexSwitchCheckEnergy1">Visual</label>
+                          <label for="searchBox">AI Capabilities</label>
+                          <div class="container mt-3">
+                            <div class="row">
+                              <div class="col-lg-6 col-md-12">
+                                <div class="d-flex flex-wrap">
+                                  <div class="col-lg-12">
+                                    <div class="d-flex flex-wrap">
+                                      <div class="col-lg-2">
+                                        <img src="./images/icons/teal/Geospatial.svg">
+                                      </div>
+                                      <div class="col-lg-10">
+                                        <div class="form-check form-switch mb-2">
+                                          <input class="form-check-input sectorFilter" type="checkbox" value="geospatial" role="switch" id="Geospatial" checked>
+                                          <label class="form-check-label" for="Geospatial">Geospatial</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="d-flex flex-wrap">
+                                      <div class="col-lg-2">
+                                        <img src="./images/icons/teal/Optimisation.svg">
+                                      </div>
+                                      <div class="col-lg-10">
+                                        <div class="form-check form-switch mb-2">
+                                          <input class="form-check-input sectorFilter" type="checkbox" value="optimisation" role="switch" id="Optimisation" checked>
+                                          <label class="form-check-label" for="Optimisation">Optimisation</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="d-flex flex-wrap">
+                                      <div class="col-lg-2">
+                                        <img src="./images/icons/teal/Language.svg">
+                                      </div>
+                                      <div class="col-lg-10">
+                                        <div class="form-check form-switch mb-2">
+                                          <input class="form-check-input sectorFilter" type="checkbox" value="language" role="switch" id="Language" checked>
+                                          <label class="form-check-label" for="Language">Language</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-md-2">
-                              <img src="./images/icons/teal/TimeSeries.svg">
-                            </div>
-                            <div class="col-md-10">
-                              <div class="form-check form-switch mb-2">
-                                <input class="form-check-input sectorFilter" type="checkbox" value="timeseries" role="switch" id="flexSwitchCheckEnergy1" checked>
-                                <label class="form-check-label" for="flexSwitchCheckEnergy1">Time Series</label>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-md-2">
-                              <img src="./images/icons/teal/OtherML.svg">
-                            </div>
-                            <div class="col-md-10">
-                              <div class="form-check form-switch mb-2">
-                                <input class="form-check-input sectorFilter" type="checkbox" value="otherml" role="switch" id="flexSwitchCheckEnergy1" checked>
-                                <label class="form-check-label" for="flexSwitchCheckEnergy1">Other ML</label>
+                              <div class="col-lg-6  col-md-12">
+                                <div class="d-flex flex-wrap">
+                                  <div class="d-flex flex-wrap">
+                                    <div class="col-lg-2">
+                                      <img src="./images/icons/teal/Visual.svg">
+                                    </div>
+                                    <div class="col-lg-10">
+                                      <div class="form-check form-switch mb-2">
+                                        <input class="form-check-input sectorFilter" type="checkbox" value="visual" role="switch" id="Visual" checked>
+                                        <label class="form-check-label" for="Visual">Visual</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="d-flex flex-wrap">
+                                    <div class="col-lg-2">
+                                      <img src="./images/icons/teal/TimeSeries.svg">
+                                    </div>
+                                    <div class="col-lg-10">
+                                      <div class="form-check form-switch mb-2">
+                                        <input class="form-check-input sectorFilter" type="checkbox" value="timeseries" role="switch" id="Time Series" checked>
+                                        <label class="form-check-label" for="Time Series">Time Series</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="d-flex flex-wrap">
+                                    <div class="col-lg-2">
+                                      <img src="./images/icons/teal/OtherML.svg">
+                                    </div>
+                                    <div class="col-lg-10">
+                                      <div class="form-check form-switch mb-2">
+                                        <input class="form-check-input sectorFilter" type="checkbox" value="otherml" role="switch" id="Other ML" checked>
+                                        <label class="form-check-label" for="Other ML">Other ML</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -239,12 +246,15 @@
             </div>
           </div>
         </div>
-      </div>
+	</div>
     </nav>
-    <!--
-  <div class=" aside-container"><aside class="bg-light p-4"><button class="toggle btn btn-secondary">|||</button><h1 class="mt-5">Filter</h1><div class="container"><div class="wrapper"><div class="row"></div><div class="row"><div class="col-md-6 col-12"><div class="checkbox-container"><h3>Sector</h3></div></div><div class="col-md-6 col-12"><div class="checkbox-container"><h3>Grand Challange</h3><div class="form-check form-switch mb-2"><input class="form-check-input sectorFiler" type="checkbox" value="energy" role="switch" id="flexSwitchCheckEnergy" checked><label class="form-check-label" for="flexSwitchCheckEnergy">Challange 1</label></div><div class="form-check form-switch mb-2"><input class="form-check-input sectorFiler" type="checkbox" value="energy" role="switch" id="flexSwitchCheckEnergy" checked><label class="form-check-label" for="flexSwitchCheckEnergy">Challange 2</label></div><div class="form-check form-switch mb-2"><input class="form-check-input sectorFiler" type="checkbox" value="energy" role="switch" id="flexSwitchCheckEnergy" checked><label class="form-check-label" for="flexSwitchCheckEnergy">Challange 3</label></div><div class="form-check form-switch mb-2"><input class="form-check-input sectorFiler" type="checkbox" value="energy" role="switch" id="flexSwitchCheckEnergy" checked><label class="form-check-label" for="flexSwitchCheckEnergy">Challange 4</label></div><div class="form-check form-switch mb-2"><input class="form-check-input sectorFiler" type="checkbox" value="energy" role="switch" id="flexSwitchCheckEnergy" checked><label class="form-check-label" for="flexSwitchCheckEnergy">Challange 5</label></div><div class="form-check form-switch mb-2"><input class="form-check-input sectorFiler" type="checkbox" value="energy" role="switch" id="flexSwitchCheckEnergy" checked><label class="form-check-label" for="flexSwitchCheckEnergy">Challange 6</label></div><div class="form-check form-switch mb-2"><input class="form-check-input sectorFiler" type="checkbox" value="energy" role="switch" id="flexSwitchCheckEnergy" checked><label class="form-check-label" for="flexSwitchCheckEnergy">Challange 7</label></div></div></div></div></div></div></aside></div>
-  
- -->
+    <!-- Small button to expand the rest of the navigation -->
+    <div id="header-toggler">
+      <div class="text-center">
+        <button id="toggler" class="btn btn-arrow btn-secondary d-lg-none arrow-down" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav"></button>
+      </div>
+    </div>
+    </nav>
     <div class="card-section"></div>
   </body>
 </html>

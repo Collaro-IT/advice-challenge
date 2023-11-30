@@ -1,16 +1,28 @@
-#header {
-  background-color: $headers-bg;
+
+#header{
+	background-color: $headers-bg;
+}
+
+#header-toggler{
+	background-color: $headers-bg;
+	padding-bottom:10px;
+}
+
+#header-content{
+	padding: 20px 50px 20px 90px;
+}
+
+#filter-content {
 
   .form-check-input {
     width: 3em;
 	height: 1.3em;
   }
   
- .form-check-label{
-		padding-left: 10px;
-	} 
+  .form-check-label{
+	padding-left: 10px;
+   } 
   
-
   .ai-capabilities-filter {
   
 	img{
@@ -73,7 +85,7 @@
 		border-radius:5px;
 		width: 30px;
 		text-align: center;
-		margin-right:10px;
+		margin-right:5px;
 	}
 	
 	.all-checked{
@@ -118,79 +130,44 @@
       background-color: $green-bg;
     }
   }
-
-  .aside-container {
-    position: fixed;
-    top: 0px;
-    z-index: 999999;
-    width: 100%;
-    height: 50px;
-    background: #efefef;
+  
   }
 
-  button:focus {
-    outline: none;
-  }
-  aside {
-    background: #1a1d23;
-    opacity: 0.95;
-    width: 450px;
-    height: 100vh;
-    position: fixed;
-    transition: 0.3s;
-
-    left: -450px;
-    top: 0;
-    transition-timing-function: cubic-bezier(0.9, 0, 1, 1);
-
-    h3 {
-      margin-bottom: 25px;
-    }
-
-    h1 {
-      font-size: 24px;
-    }
-  }
-  aside.close {
-    left: 0;
-    transition: 0.3s;
-    transition-timing-function: cubic-bezier(0.9, 0, 1, 1);
-    z-index: 999999;
-  }
-  nav a {
-    display: block;
-    color: #ddd;
-    text-decoration: none;
-    padding: 10px;
-  }
-  nav a:hover {
-    background: #313640;
-  }
-  aside button {
-    border: none;
-    background: none;
-    position: absolute;
-    right: -45px;
-    top: 7px;
-    font-size: 30px;
-    transform: rotate(90deg);
-    display: inline-block;
-    cursor: pointer;
-    z-index: 999999;
-  }
-
-  aside img {
-    width: 260px;
-    height: auto;
-    left: 10px;
-    position: absolute;
-    top: 10px;
-  }
-
-  @media only screen and (max-width: 600px) {
-    .close .toggle {
-      right: -100px;
-      position: absolute;
-    }
-  }
+/* Default button style */
+#toggler {
+  display: inline-block;
+  padding: 20px 50px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  color: #fff;
 }
+
+/* Arrow-up specific styles */
+.btn-arrow.arrow-up {
+  position: relative;
+}
+
+.btn-arrow.arrow-up::before {
+  content: '\25B2'; /* Unicode character for upward arrow */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Arrow-down specific styles */
+.btn-arrow.arrow-down {
+  position: relative;
+}
+
+.btn-arrow.arrow-down::before {
+  content: '\25BC'; /* Unicode character for downward arrow */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+

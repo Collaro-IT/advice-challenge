@@ -403,3 +403,12 @@ $(document).ready(function() {
         }
     });
 });
+
+$(document).ready(function() {
+	
+	$('#toggler').click(function(){
+		$('#toggler').toggleClass("arrow-down");
+		$('#toggler').toggleClass("arrow-up");
+	});
+});
+
