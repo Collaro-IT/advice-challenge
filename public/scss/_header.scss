@@ -1,0 +1,195 @@
+#header {
+  background-color: $headers-bg;
+
+  .form-check-input {
+    width: 3em;
+	height: 1.3em;
+  }
+  
+ .form-check-label{
+		padding-left: 10px;
+	} 
+  
+
+  .ai-capabilities-filter {
+  
+	img{
+		width: 40px;
+		margin-right:10px; 
+	}
+	
+	.form-check{
+		margin-left: 10px;
+	}
+
+  
+  }
+
+  .scores-filter {
+  
+  
+  	.form-check{
+		padding-right: 10px;
+	}
+  
+    .score-check {
+      width: 25px;
+      height: 25px;
+	  padding-right:10px;
+      background-color: $headers-bg;
+      border: $headers-bg;
+
+      &:checked {
+        background-image: url("/public/assets/Icons/fill-star.svg");
+        background-color: $headers-bg;
+        border: $headers-bg;
+      }
+      &:not(:checked) {
+        background-image: url("/public/assets/Icons/star.svg");
+        background-color: $headers-bg;
+        border: $headers-bg;
+      }
+    }
+	
+	.star{
+		width: 25px;
+		height: 25px;
+		cursor: pointer;
+		background-image: url("/public/assets/Icons/star.svg");
+	}
+	
+	.star-checked{
+		 background-image: url("/public/assets/Icons/fill-star.svg") !important;
+	}
+	
+	
+	.all{
+		width: 25px;
+		height: 25px;
+		cursor: pointer;
+		border:1px solid #666;
+		background-color:#efefef;
+		color:#000;
+		border-radius:5px;
+		width: 30px;
+		text-align: center;
+	}
+	
+	.all-checked{
+		
+		background-color:#008083;
+		color:#fff;
+	}	
+  }
+
+  .energy-checkbox {
+    &:checked {
+      background-color: $teal;
+    }
+    &:not(:checked) {
+      background-color: $teal-bg;
+    }
+  }
+
+  .manufacturing-checkbox {
+    &:checked {
+      background-color: $orange;
+    }
+    &:not(:checked) {
+      background-color: $orange-bg;
+    }
+  }
+
+  .built-environment-checkbox {
+    &:checked {
+      background-color: $pink;
+    }
+    &:not(:checked) {
+      background-color: $pink-bg;
+    }
+  }
+
+  .agriculture-checkbox {
+    &:checked {
+      background-color: $green;
+    }
+    &:not(:checked) {
+      background-color: $green-bg;
+    }
+  }
+
+  .aside-container {
+    position: fixed;
+    top: 0px;
+    z-index: 999999;
+    width: 100%;
+    height: 50px;
+    background: #efefef;
+  }
+
+  button:focus {
+    outline: none;
+  }
+  aside {
+    background: #1a1d23;
+    opacity: 0.95;
+    width: 450px;
+    height: 100vh;
+    position: fixed;
+    transition: 0.3s;
+
+    left: -450px;
+    top: 0;
+    transition-timing-function: cubic-bezier(0.9, 0, 1, 1);
+
+    h3 {
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+  aside.close {
+    left: 0;
+    transition: 0.3s;
+    transition-timing-function: cubic-bezier(0.9, 0, 1, 1);
+    z-index: 999999;
+  }
+  nav a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    padding: 10px;
+  }
+  nav a:hover {
+    background: #313640;
+  }
+  aside button {
+    border: none;
+    background: none;
+    position: absolute;
+    right: -45px;
+    top: 7px;
+    font-size: 30px;
+    transform: rotate(90deg);
+    display: inline-block;
+    cursor: pointer;
+    z-index: 999999;
+  }
+
+  aside img {
+    width: 260px;
+    height: auto;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .close .toggle {
+      right: -100px;
+      position: absolute;
+    }
+  }
+}
