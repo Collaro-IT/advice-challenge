@@ -166,7 +166,7 @@ class Card {
 
     // STRING Get Background Image
     getImg() {
-        return '/Images/' + this.data.sector + '.svg'
+        return this.data.sector + '.svg'
     }
 
     // BOOL Hide Icon 1 
@@ -192,8 +192,8 @@ class Card {
     // STRING returns HTML for the Star Ratings
 
     starRating(n) {
-        const fillStar = '<img src="./public/assets/Icons/fill-star.svg" alt="fill-star.svg" />';
-        const emptyStar = '<img src="./public/assets/Icons/star.svg" alt="star.svg" />';
+        const fillStar = '<img src="images/icons/fill-star.svg" alt="fill-star.svg" />';
+        const emptyStar = '<img src="images/icons/star.svg" alt="star.svg" />';
 
         switch (n) {
             case 1:
@@ -227,24 +227,24 @@ class Card {
               <h5 class="card-${this.getColor()}-text-bg">${this.data.challenge}</h5>
 			</div>` : ''}
             <div class="icon icon-1 card-${this.getColor()}-bg">
-              <span><img src="./public/assets/Icons/${this.getPhaseIcon()}" /></span>
+              <span><img src="images/icons/${this.getPhaseIcon()}" /></span>
             </div>
 		    ${!this.hideIcon1() ? `
 		      <div class="icon icon-2 card-${this.getColor()}-bg">
-			  <span><img src="./public/assets/Icons/${this.getAI1Icon()}" /></span>
+			  <span><img src="images/icons/${this.getAI1Icon()}" /></span>
 		    </div>` : ''}
 		    ${!this.hideIcon2() ? `
 		      <div class="icon icon-3 card-${this.getColor()}-bg">
-			  <span><img src="./public/assets/Icons/${this.getAI2Icon()}" /></span>
+			  <span><img src="images/icons/${this.getAI2Icon()}" /></span>
 		    </div>` : ''}
 		    ${!this.hideIcon3() ? `
 		      <div class="icon icon-4 card-${this.getColor()}-bg">
-			  <span><img src="./public/assets/Icons/${this.getAI3Icon()}" /></span>
+			  <span><img src="images/icons/${this.getAI3Icon()}" /></span>
 		    </div>` : ''}
           </div>
 
           <div class="card-conent-img">
-            <img src="./public/assets/${this.getImg()}" alt="" />
+            <img src="images/${this.getImg()}" alt="" />
           </div>
           <div class="card-content-text card-${this.getColor()}-text-bg">
             <p>${this.data.description}</p>
