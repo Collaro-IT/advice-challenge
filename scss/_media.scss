@@ -1,5 +1,6 @@
- @media only screen and (max-width: 900px) {
 
+
+@media only screen and (max-width: 900px) {
 
 	#header-content{
 	width: 100% !important;
@@ -21,6 +22,16 @@
 
 @media only screen and (max-width: 600px) {
 
+	body {
+		overflow-x: hidden;
+	}
+
+	/* Optional: Disable scrolling completely on touch devices */
+	body.touch-scroll-disabled {
+		overflow: hidden;
+	}
+
+
 	.ai-capabilities-filter{
 		  .form-check-label{
 		padding-left: 10px !important;
@@ -35,13 +46,32 @@
 	
 	
 	.form-switch{
-	min-width:140px;
+		min-width:140px;
 	}
 	
-		.card-section .card {
-		width: 100% !important;
-
+	#filter-content .form-check-input {
+	  width: 3em;
+	  height: 1.3em;
 	}
+	
+}
+
+/* Add this CSS to your stylesheet */
+@media only screen and (max-width: 1800px) {
+ 
+
+#header{
+
+	  .container-fluid{
+		display:block;
+	  }
+	}
+
+	#filter-content .form-check-input {
+	  width: 2.5em;
+	  height: 1.3em;
+	}
+
 
 }
 

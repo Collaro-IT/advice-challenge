@@ -4,22 +4,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Carbon Challange - ADViCE | AI Annovation for Decarbonisation's Virtual Centre of Excellence</title>
+    <title>AI Carbon Challenge - ADViCE | AI Annovation for Decarbonisation's Virtual Centre of Excellence</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="./js/main.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
-	<link rel="icon" type="image/x-icon" href="./favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="./favicon.svg">
   </head>
   <body>
-    <nav id="header" class="navbar navbar-expand-lg">
+    <button id="scrollToTopBtn" class="btn btn-secondary">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    <nav id="header" class="navbar navbar-expand-md">
       <div class="container-fluid">
         <div id="header-content">
           <div class="col-md-12">
             <div class="row">
-              <img style="width:300px" class="logo" src="./images/advice.png">
+              <a href="https://www.turing.ac.uk/research/research-projects/advice" target="_blank">
+                <img class="logo" src="./images/advice.png">
+              </a>
             </div>
             <div class="row">
               <label for="searchBox">Search...</label>
@@ -27,15 +33,15 @@
             </div>
           </div>
         </div>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse custom-collapse" id="navbarNav">
           <div class="d-flex flex-wrap w-100">
             <div id="filter-content">
               <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <div class="d-flex flex-wrap w-100">
-                    <div class="col-lg-2 col-md-4">
+                    <div class="col-lg-2 col-md-4 col-sm-5">
                       <div class="container mt-3 sector-filter">
-                        <label for="searchBox">Sector</label>
+                        <b>Sector</b>
                         <div class="form-check form-switch mb-2">
                           <input class="form-check-input energy-checkbox" type="checkbox" value="energy" role="switch" id="flexSwitchCheckEnergy" checked>
                           <label class="form-check-label" for="flexSwitchCheckEnergy">Energy</label>
@@ -57,26 +63,29 @@
                     <div class="col-lg-3 col-md-4">
                       <div class="container mt-3 scores-filter">
                         <div class="row">
-                          <label for="searchBox">Scores</label>
+						  <div class="info-tooltip" data-tooltip-anchor="bottom" data-tooltip="Choose from either all scores, 1 star, 2 stars or 3 stars..">
+                            <img src="./images/icons/help.svg">
+                            <b>Scores</b>
+                          </div>
                           <div class="d-flex flex-wrap">
                             <div class="col-md-2 col-sm-4">
                               <div class="mb-2">
-                                <div class="all all-checked">All</div>
+                                <div title="Show All Scores" class="all all-checked"></div>
                               </div>
                             </div>
-                            <div class="col-md-2 col-sm-4">
+                            <div class="col-md-2">
                               <div class="mb-2">
-                                <div class="star star-checked"></div>
+                                <div title="1 Star Only" class="star star-checked"></div>
                               </div>
                             </div>
-                            <div class="col-md-2 col-sm-4">
+                            <div class="col-md-2">
                               <div class="mb-2">
-                                <div class="star star-checked"></div>
+                                <div title="2 Stars Only" class="star star-checked"></div>
                               </div>
                             </div>
-                            <div class="col-md-2 col-sm-4">
+                            <div class="col-md-2">
                               <div class="mb-2">
-                                <div class="star star-checked"></div>
+                                <div title="3 Stars Only" class="star star-checked"></div>
                               </div>
                             </div>
                             <div class="col-md-2 col-sm-4">
@@ -87,22 +96,22 @@
                           <div class="d-flex flex-wrap">
                             <div class="col-md-2">
                               <div class="mb-2">
-                                <div class="all all-checked">All</div>
+                                <div title="Show All Scores" class="all all-checked"></div>
                               </div>
                             </div>
                             <div class="col-md-2">
                               <div class="mb-2">
-                                <div class="star star-checked"></div>
+                                <div title="1 Star Only" class="star star-checked"></div>
                               </div>
                             </div>
                             <div class="col-md-2">
                               <div class="mb-2">
-                                <div class="star star-checked"></div>
+                                <div title="2 Stars Only" class="star star-checked"></div>
                               </div>
                             </div>
                             <div class="col-md-2">
                               <div class="mb-2">
-                                <div class="star star-checked"></div>
+                                <div title="3 Stars Only" class="star star-checked"></div>
                               </div>
                             </div>
                             <div class="col-md-4">
@@ -113,22 +122,22 @@
                           <div class="d-flex flex-wrap">
                             <div class="col-md-2">
                               <div class="mb-2">
-                                <div class="all all-checked">All</div>
+                                <div title="Show All Scores" class="all all-checked"></div>
                               </div>
                             </div>
                             <div class="col-md-2">
                               <div class="mb-2">
-                                <div class="star star-checked"></div>
+                                <div title="1 Star Only" class="star star-checked"></div>
                               </div>
                             </div>
                             <div class="col-md-2">
                               <div class="mb-2">
-                                <div class="star star-checked"></div>
+                                <div title="2 Stars Only" class="star star-checked"></div>
                               </div>
                             </div>
                             <div class="col-md-2">
                               <div class="mb-2">
-                                <div class="star star-checked"></div>
+                                <div title="3 Stars Only" class="star star-checked"></div>
                               </div>
                             </div>
                             <div class="col-md-4">
@@ -141,36 +150,36 @@
                     </div>
                     <div class="col-lg-2 col-md-4">
                       <div class="container mt-3 gc-filter">
-                        <label for="gradeCombobox" class="form-label">Grand Challange</label>
+                        <label for="gradeCombobox" class="form-label">Grand Challenge</label>
                         <select class="form-select" id="gradeCombobox">
                           <option value="all" selected>All</option>
-                          <option value="gc1">GC1</option>
-                          <option value="gc2">GC2</option>
-                          <option value="gc3">GC3</option>
-                          <option value="gc4">GC4</option>
-                          <option value="gc5">GC5</option>
-                          <option value="gc6">GC6</option>
-                          <option value="gc7">GC7</option>
+                          <option value="gc1">Grand Challenge 1</option>
+                          <option value="gc2">Grand Challenge 2</option>
+                          <option value="gc3">Grand Challenge 3</option>
+                          <option value="gc4">Grand Challenge 4</option>
+                          <option value="gc5">Grand Challenge 5</option>
+                          <option value="gc6">Grand Challenge 6</option>
+                          <option value="gc7">Grand Challenge 7</option>
                         </select>
                       </div>
                     </div>
                     <div class="col-lg-5 col-md-4">
                       <div class="container mt-3 ai-capabilities-filter">
                         <div class="row">
-						  <div class="ai-tooltip" data-tooltip-anchor="bottom" data-tooltip="Use this to filter for challenges which require different types of AI capabilities, e.g. times series, or geospatial. This toggle can be used to identify challenges which align with your skills.">
-							<img src="./images/icons/help.svg">
-							<label for="searchBox">AI Capabilities</label>
-						  </div>
+                          <div class="ai-tooltip" data-tooltip-anchor="bottom" data-tooltip="The types of AI that are most applicable to a challenge (max 3).">
+                            <img src="./images/icons/help.svg">
+                            <b>AI Capabilities</b>
+                          </div>
                           <div class="container mt-3">
                             <div class="row">
                               <div class="col-lg-6 col-md-12">
                                 <div class="d-flex flex-wrap">
                                   <div class="col-lg-12">
                                     <div class="d-flex flex-wrap">
-                                      <div class="col-lg-2">
+                                      <div class="col-lg-3">
                                         <img src="./images/icons/teal/Geospatial.svg">
                                       </div>
-                                      <div class="col-lg-10">
+                                      <div class="col-lg-9">
                                         <div class="form-check form-switch mb-2">
                                           <input class="form-check-input sectorFilter" type="checkbox" value="geospatial" role="switch" id="Geospatial" checked>
                                           <label class="form-check-label" for="Geospatial">Geospatial</label>
@@ -178,10 +187,10 @@
                                       </div>
                                     </div>
                                     <div class="d-flex flex-wrap">
-                                      <div class="col-lg-2">
+                                      <div class="col-lg-3">
                                         <img src="./images/icons/teal/Optimisation.svg">
                                       </div>
-                                      <div class="col-lg-10">
+                                      <div class="col-lg-9">
                                         <div class="form-check form-switch mb-2">
                                           <input class="form-check-input sectorFilter" type="checkbox" value="optimisation" role="switch" id="Optimisation" checked>
                                           <label class="form-check-label" for="Optimisation">Optimisation</label>
@@ -189,10 +198,10 @@
                                       </div>
                                     </div>
                                     <div class="d-flex flex-wrap">
-                                      <div class="col-lg-2">
+                                      <div class="col-lg-3">
                                         <img src="./images/icons/teal/Language.svg">
                                       </div>
-                                      <div class="col-lg-10">
+                                      <div class="col-lg-9">
                                         <div class="form-check form-switch mb-2">
                                           <input class="form-check-input sectorFilter" type="checkbox" value="language" role="switch" id="Language" checked>
                                           <label class="form-check-label" for="Language">Language</label>
@@ -202,38 +211,40 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-6  col-md-12">
+                              <div class="col-lg-6 col-md-12">
                                 <div class="d-flex flex-wrap">
-                                  <div class="d-flex flex-wrap">
-                                    <div class="col-lg-2">
-                                      <img src="./images/icons/teal/Visual.svg">
-                                    </div>
-                                    <div class="col-lg-10">
-                                      <div class="form-check form-switch mb-2">
-                                        <input class="form-check-input sectorFilter" type="checkbox" value="visual" role="switch" id="Visual" checked>
-                                        <label class="form-check-label" for="Visual">Visual</label>
+                                  <div class="col-lg-12">
+                                    <div class="d-flex flex-wrap">
+                                      <div class="col-lg-3">
+                                        <img src="./images/icons/teal/Visual.svg">
+                                      </div>
+                                      <div class="col-lg-9">
+                                        <div class="form-check form-switch mb-2">
+                                          <input class="form-check-input sectorFilter" type="checkbox" value="visual" role="switch" id="Visual" checked>
+                                          <label class="form-check-label" for="Visual">Visual</label>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                  <div class="d-flex flex-wrap">
-                                    <div class="col-lg-2">
-                                      <img src="./images/icons/teal/TimeSeries.svg">
-                                    </div>
-                                    <div class="col-lg-10">
-                                      <div class="form-check form-switch mb-2">
-                                        <input class="form-check-input sectorFilter" type="checkbox" value="timeseries" role="switch" id="Time Series" checked>
-                                        <label class="form-check-label" for="Time Series">Time Series</label>
+                                    <div class="d-flex flex-wrap">
+                                      <div class="col-lg-3">
+                                        <img src="./images/icons/teal/TimeSeries.svg">
+                                      </div>
+                                      <div class="col-lg-9">
+                                        <div class="form-check form-switch mb-2">
+                                          <input class="form-check-input sectorFilter" type="checkbox" value="timeseries" role="switch" id="Time Series" checked>
+                                          <label class="form-check-label" for="Time Series">Time Series</label>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                  <div class="d-flex flex-wrap">
-                                    <div class="col-lg-2">
-                                      <img src="./images/icons/teal/OtherML.svg">
-                                    </div>
-                                    <div class="col-lg-10">
-                                      <div class="form-check form-switch mb-2">
-                                        <input class="form-check-input sectorFilter" type="checkbox" value="otherml" role="switch" id="Other ML" checked>
-                                        <label class="form-check-label" for="Other ML">Other ML</label>
+                                    <div class="d-flex flex-wrap">
+                                      <div class="col-lg-3">
+                                        <img src="./images/icons/teal/OtherML.svg">
+                                      </div>
+                                      <div class="col-lg-9">
+                                        <div class="form-check form-switch mb-2">
+                                          <input class="form-check-input sectorFilter" type="checkbox" value="otherml" role="switch" id="Other ML" checked>
+                                          <label class="form-check-label" for="Other ML">Other ML</label>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -250,9 +261,9 @@
             </div>
           </div>
         </div>
-	</div>
+      </div>
     </nav>
-    <!-- Small button to expand the rest of the navigation -->
+    <!-- Small button to expand the rest of the filters -->
     <div id="header-toggler">
       <div class="text-center">
         <button id="toggler" class="btn btn-arrow btn-secondary d-lg-none arrow-down" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav"></button>
@@ -260,8 +271,7 @@
     </div>
     </nav>
     <div class="card-section"></div>
-	 <footer class="bg-dark text-light text-center py-3">
-    Designed and built by <a target="_blank" href="https://collaro.io">Collaro IT Solutions</a>
-  </footer>
+    <footer class="bg-dark text-light text-center py-3"> Designed and built by <a target="_blank" href="https://collaro.io">Collaro IT Solutions</a>
+    </footer>
   </body>
 </html>

@@ -243,7 +243,7 @@ class Card {
 		    </div>` : ''}
           </div>
 
-          <div class="card-conent-img">
+          <div class="card-content-img">
             <img src="images/${this.getImg()}" alt="" />
           </div>
           <div class="card-content-text card-${this.getColor()}-text-bg">
@@ -412,9 +412,40 @@ $(document).ready(function() {
 	});
 	
 	
-	
-	
  $(function () {
       $('[data-bs-toggle="tooltip"]').tooltip();
     });
+});
+
+
+
+$(document).ready(function () {
+    // Show/hide the button based on scroll position
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#scrollToTopBtn').fadeIn();
+        } else {
+            $('#scrollToTopBtn').fadeOut();
+        }
+    });
+
+    // Scroll to top when the button is clicked
+    $('#scrollToTopBtn').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+        return false;
+    });
+	
+	
+	$('#toggler').click(function(){
+
+		if($(this).hasClass("arrow-down")){
+			
+			$('html, body').animate({ scrollTop: 0 }, 'slow');
+        return false;
+		}
+			
+		
+	});
+	
+	
 });
