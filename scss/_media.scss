@@ -1,160 +1,141 @@
+@media only screen and (max-width: 900px) {
+  /* Mobile landscape */
 
+  #header-content {
+    width: 100% !important;
+  }
 
-@media only screen and (max-width: 900px) { /* Mobile landscape */
+  .sector-filter {
+    min-width: 400px;
+  }
 
-	#header-content{
-	width: 100% !important;
-	}
-	
-	
-	.sector-filter{
-	
-	min-width: 400px;
-	}
-	
-	.card-section .card {
-		width: 300px !important;
-
-	}
-	
-
+  .card-section .card {
+    width: 300px !important;
+  }
 }
 
-@media only screen and (max-width: 600px) { /* Mobile Port */
+@media only screen and (max-width: 600px) {
+  /* Mobile Port */
 
-	body {
-		overflow-x: hidden;
-	}
+  body {
+    overflow-x: hidden;
+  }
 
-	/* Optional: Disable scrolling completely on touch devices */
-	body.touch-scroll-disabled {
-		overflow: hidden;
-	}
+  /* Optional: Disable scrolling completely on touch devices */
+  body.touch-scroll-disabled {
+    overflow: hidden;
+  }
 
+  .ai-capabilities-filter {
+    .form-check-label {
+      padding-left: 10px !important;
+    }
+  }
 
-	.ai-capabilities-filter{
-		  .form-check-label{
-		padding-left: 10px !important;
-	   } 
-	}
+  #header-content {
+    padding: 15px !important;
+    width: 100% !important;
+  }
 
+  .scores-filter {
+    p {
+      padding-left: 10px;
+    }
+  }
 
-	#header-content{
-	padding:15px !important;
-	width: 100% !important;
-	}
-	
-	.scores-filter{
-	
-	p{padding-left:10px;}
-	}
+  #filter-content .scores-filter .all {
+    margin-left: 5px;
+  }
 
-	
-	#filter-content .scores-filter .all{
-	margin-left:5px;
-	}
-	
-	#filter-content .scores-filter .star{
-	margin-left:5px;
-	}
-	
-	.form-switch{
-		min-width:140px;
-	}
-	
-	#filter-content .form-check-input {
-	  width: 3em;
-	  height: 1.3em;
-	}
-	
+  #filter-content .scores-filter .star {
+    margin-left: 5px;
+  }
 
-	.card-section .card {
-		width: 100% !important;
+  .form-switch {
+    min-width: 140px;
+  }
 
-	}
+  #filter-content .form-check-input {
+    width: 3em;
+    height: 1.3em;
+  }
 
-	.card-section {
-		margin:0px;
-		margin-top: 60px;
+  .card-section .card {
+    width: 100% !important;
+  }
 
-	}
-	
-	.card-section .card{
-		width:100%;
-	}
+  .card-section {
+    margin: 0px;
+    margin-top: 60px;
+  }
 
-	.card-section .card .card-content .card-content-img{
-		height:16.6em;
-	}
+  .card-section .card {
+    width: 100%;
+  }
 
-	.card-section .card .card-content .card-content-text{
-		height:21em;
-	}
+  .card-section .card .card-content .card-content-img {
+    height: 16.6em;
+  }
 
-	.card-section .card .card-content .card-content-text p {
-	  font-size: 15px;
-	  font-weight: 500;
-	  margin-bottom: 30px;
-	}
+  .card-section .card .card-content .card-content-text {
+    height: 21em;
+  }
 
-	.card-section .card .card-content .card-side .control-system span {
-	  font-size: 19px;
-	  width: 13em;
-	}	
-	
-	.card-section .card .card-content .card-side .control-system {
-	  right: -295px;
-	  width: 330px;
-	  height: 85px;
-	}
+  .card-section .card .card-content .card-content-text p {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
 
-	.card-section .card .card-content .card-side .icon{
-		width: 58px;
-		height: 58px;
-	}
-	
-	.card-section .card .card-content .card-content-text .rating-item{
-		height:32px;
-	}
+  .card-section .card .card-content .card-side .control-system span {
+    font-size: 19px;
+    width: 13em;
+  }
 
-	.card-section .card .card-content .card-content-text .rating{
-		top:-87px;
-	}
+  .card-section .card .card-content .card-side .control-system {
+    right: -295px;
+    width: 330px;
+    height: 85px;
+  }
 
-	.card-section .card .card-content .card-side .gc h5{
-		font-size:24px;
-	}
+  .card-section .card .card-content .card-side .icon {
+    width: 58px;
+    height: 58px;
+  }
 
-	.card-section .card .card-content .card-side {
-	  width: 67px;
-	}
+  .card-section .card .card-content .card-content-text .rating-item {
+    height: 32px;
+  }
 
+  .card-section .card .card-content .card-content-text .rating {
+    top: -87px;
+  }
+
+  .card-section .card .card-content .card-side .gc h5 {
+    font-size: 24px;
+  }
+
+  .card-section .card .card-content .card-side {
+    width: 67px;
+  }
 }
-
-
 
 /* Add this CSS to your stylesheet */
-@media only screen and (max-width: 1800px) { /* IPADS */
- 
+@media only screen and (max-width: 1800px) {
+  /* IPADS */
 
-#header{
+  #header {
+    .container-fluid {
+      display: block;
+    }
+  }
 
-	  .container-fluid{
-		display:block;
-	  }
-	}
+  #filter-content .form-check-input {
+    width: 2.5em;
+    height: 1.3em;
+  }
 
-	#filter-content .form-check-input {
-	  width: 2.5em;
-	  height: 1.3em;
-	}
-
-
-.card-section {
-  margin: 0px;
+  .card-section {
+    margin: 0px;
+  }
 }
-
-
-}
-
-

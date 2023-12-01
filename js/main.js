@@ -368,7 +368,7 @@ function setupFilters(cardReader) {
 $(document).ready(function() {
     // Add click event listener to dynamically added star divs
     $('.scores-filter').on('click', '.btn-star', function() {
-        var value = $(this).data("star");	
+        var value = $(this).data("star");
         var currentStar = $(this);
         var starContainer = currentStar.closest('.d-flex');
         var hiddenInput = starContainer.find('input');
@@ -399,23 +399,23 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-	
-	$('#toggler').click(function(){
-		$('#toggler').toggleClass("arrow-down");
-		$('#toggler').toggleClass("arrow-up");
-	});
-	
-	
- $(function () {
-      $('[data-bs-toggle="tooltip"]').tooltip();
+
+    $('#toggler').click(function() {
+        $('#toggler').toggleClass("arrow-down");
+        $('#toggler').toggleClass("arrow-up");
+    });
+
+
+    $(function() {
+        $('[data-bs-toggle="tooltip"]').tooltip();
     });
 });
 
 
 
-$(document).ready(function () {
+$(document).ready(function() {
     // Show/hide the button based on scroll position
-    $(window).scroll(function () {
+    $(window).scroll(function() {
         if ($(this).scrollTop() > 100) {
             $('#scrollToTopBtn').fadeIn();
         } else {
@@ -424,22 +424,26 @@ $(document).ready(function () {
     });
 
     // Scroll to top when the button is clicked
-    $('#scrollToTopBtn').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    $('#scrollToTopBtn').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 'slow');
         return false;
     });
-	
-	
-	$('#toggler').click(function(){
 
-		if($(this).hasClass("arrow-down")){
-			
-			$('html, body').animate({ scrollTop: 0 }, 'slow');
-        return false;
-		}
-			
-		
-	});
-	
-	
+
+    $('#toggler').click(function() {
+
+        if ($(this).hasClass("arrow-down")) {
+
+            $('html, body').animate({
+                scrollTop: 0
+            }, 'slow');
+            return false;
+        }
+
+
+    });
+
+
 });
