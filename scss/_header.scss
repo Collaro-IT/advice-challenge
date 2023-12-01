@@ -81,52 +81,16 @@
   	.form-check{
 		padding-right: 10px;
 	}
+	
+	.score-selected{
+	background-color:#9dcaed;
+	}
   
-    .score-check {
-      width: 25px;
-      height: 25px;
-	  padding-right:10px;
-      background-color: $headers-bg;
-      border: $headers-bg;
-
-      &:checked {
-        background-image: url("../images/icons/fill-star.svg");
-        background-color: $headers-bg;
-        border: $headers-bg;
-      }
-      &:not(:checked) {
-        background-image: url("../images/icons/star.svg");
-        background-color: $headers-bg;
-        border: $headers-bg;
-      }
-    }
-	
-	.star{
-		width: 25px;
-		height: 25px;
-		cursor: pointer;
-		background-image: url("../images/icons/star.svg");
+	.btn-star{
+	margin-right:10px;
 	}
-	
-	.star-checked{
-		 background-image: url("../images/icons/fill-star.svg") !important;
-	}
-	
-	
-	
-	
-	.all{
-		width: 25px;
-		height: 25px;
-		cursor: pointer;
-		background-image: url("../images/icons/all-star.svg");
-		
-	}
-	
-	.all-checked{
-		
-		 background-image: url("../images/icons/all-fill-star.svg") !important;
-	}	
+  
+   
   }
 
   .energy-checkbox {

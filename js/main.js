@@ -365,44 +365,38 @@ function setupFilters(cardReader) {
 
 
 
-// Handles the Stars being clicked and disabled with saving the value into hidden input 
 $(document).ready(function() {
     // Add click event listener to dynamically added star divs
-    $('.scores-filter').on('click', '.star, .all', function() {
+    $('.scores-filter').on('click', '.btn-star', function() {
+        var value = $(this).data("star");	
         var currentStar = $(this);
-        var starContainer = currentStar.closest('.d-flex ').find('.star');
-        var allStar = currentStar.closest('.d-flex ').find('.all');
-        var hiddenInput = currentStar.closest('.d-flex ').find('input');
+        var starContainer = currentStar.closest('.d-flex');
+        var hiddenInput = starContainer.find('input');
 
-        if (currentStar.hasClass('all')) {
-            // Clicked on the "All" star
+        if (currentStar.hasClass('score-selected')) {
+            // Clicked on a star with the score-selected class
 
-            if (!currentStar.hasClass('all-checked')) {
-                allStar.toggleClass('all-checked');
-            }
-            starContainer.addClass('star-checked');
-            hiddenInput.val(allStar.hasClass('all-checked') ? 'all' : starContainer.index(currentStar) + 1).trigger('change');
+            // Remove score-selected class from other buttons in the same row
+            starContainer.find('.btn-star').removeClass('score-selected');
+
+            // Set the hidden input to ALL
+            hiddenInput.val('all').trigger('change');
         } else {
-            // Clicked on an individual star
-            var starIndex = starContainer.index(currentStar) + 1;
+            // Clicked on a star without the score-selected class
 
-            // Toggle star-checked class on stars before the clicked star
-            starContainer.each(function(index) {
-                if (index < starIndex) {
-                    $(this).addClass('star-checked');
-                } else {
-                    $(this).removeClass('star-checked');
-                }
-            });
+            // Remove score-selected class from other buttons in the same row
+            starContainer.find('.btn-star').removeClass('score-selected');
 
-            // Set the hidden input value based on the checked stars
-            hiddenInput.val(starIndex).trigger('change');
+            // Add score-selected class to the clicked star
+            currentStar.addClass('score-selected');
 
-            // Remove the "all-checked" class from the "All" star
-            allStar.removeClass('all-checked');
+            // Set the hidden input to the clicked star's number
+            hiddenInput.val(value).trigger('change');
         }
     });
 });
+
+
 
 $(document).ready(function() {
 	
