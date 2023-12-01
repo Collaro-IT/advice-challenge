@@ -57,7 +57,8 @@
 .card-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  
+  justify-content: flex-start; /* Align cards to the left */
   margin: 100px;
   
   .card {
@@ -66,7 +67,7 @@
     overflow: hidden;
 	margin-bottom:20px;
 	animation: slideIn 0.5s ease-in-out;
-	
+	margin:10px;
 	
     .card-content {
       .card-side {
@@ -206,70 +207,4 @@
 
 
 
-
-
-@media only screen and (max-width: 600px) {
-	
-	.card-section .card {
-		width: 100% !important;
-
-	}
-
-	.card-section {
-		margin:0px;
-		margin-top: 60px;
-
-	}
-	
-	.card-section .card{
-		width:100%;
-	}
-
-	.card-section .card .card-content .card-content-img{
-		height:16.6em;
-	}
-
-	.card-section .card .card-content .card-content-text{
-		height:21em;
-	}
-
-	.card-section .card .card-content .card-content-text p {
-	  font-size: 16px;
-	  font-weight: 500;
-	  margin-bottom: 30px;
-	}
-
-	.card-section .card .card-content .card-side .control-system span {
-	  font-size: 19px;
-	  width: 13em;
-	}	
-	
-	.card-section .card .card-content .card-side .control-system {
-	  right: -295px;
-	  width: 330px;
-	  height: 85px;
-	}
-
-	.card-section .card .card-content .card-side .icon{
-		width: 58px;
-		height: 58px;
-	}
-	
-	.card-section .card .card-content .card-content-text .rating-item{
-		height:32px;
-	}
-
-	.card-section .card .card-content .card-content-text .rating{
-		top:-87px;
-	}
-
-	.card-section .card .card-content .card-side .gc h5{
-		font-size:24px;
-	}
-
-	.card-section .card .card-content .card-side {
-	  width: 67px;
-	}
-
-}
 
