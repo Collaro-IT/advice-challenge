@@ -71,10 +71,22 @@
 
     .score-selected {
       background-color: #9dcaed;
+	  
+	  .fa-star{ 
+	  color:#b28619 !important;
+	  }
+	  
+	  
     }
 
     .btn-star {
       margin-right: 10px;
+	  
+	  
+	  .fa-star{ 
+	  color:#ebb51f;
+	  }
+	  
     }
   }
 
