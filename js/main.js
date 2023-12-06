@@ -1,20 +1,20 @@
+// CardReader Class, which handles loading of the data, filtering and generating the card objects
 class CardReader {
     constructor(jsonURL) {
-        this.jsonURL = jsonURL;
+        this.jsonURL = jsonURL; // Where the JSON file is
         this.jsonData = []; // Property to store JSON data
-        this.filters = {
-            sector: null, // Example filter for sector
+        this.filters = { // Each filter, needs to be handled in appliesFilter method  
+            sector: null, 
             aiCapabilities: null,
             grandChallange: null,
-            searchText: '', // Example filter for text search
+            searchText: '', 
             scoreImpact: null,
             scoreAI: null,
             scoreNovelty: null,
-
-            // Add more filters as needed
         };
     }
 
+    // Fetch the Data as ASYNC 
     async fetchData() {
         try {
             // Fetch JSON data
@@ -25,6 +25,7 @@ class CardReader {
         }
     }
 
+    // Applies the filters we setup 
     applyFilters() {
         // Apply filters to the data
         let filteredData = this.jsonData;
@@ -54,30 +55,26 @@ class CardReader {
             );
         }
 
-
+	// Challange Filter
         if (this.filters.challenge && this.filters.challenge.length > 0) {
-
             filteredData = filteredData.filter(item => this.filters.challenge == item.challenge.toLowerCase());
         }
 
+	// Score Impact Filter
         if (this.filters.scoreImpact && this.filters.scoreImpact.length > 0) {
             filteredData = filteredData.filter(item =>
                 item.Impact == this.filters.scoreImpact
             );
         }
 
-        if (this.filters.scoreAI && this.filters.scoreAI.length > 0) {
-            filteredData = filteredData.filter(item =>
-                item.Impact == this.filters.scoreAI
-            );
-        }
-
+	// Score AI Filter
         if (this.filters.scoreAI && this.filters.scoreAI.length > 0) {
             filteredData = filteredData.filter(item =>
                 item.AISuitability == this.filters.scoreAI
             );
         }
 
+	// Score Novelty
         if (this.filters.scoreNovelty && this.filters.scoreNovelty.length > 0) {
             filteredData = filteredData.filter(item =>
                 item.Novelty == this.filters.scoreNovelty
@@ -89,7 +86,7 @@ class CardReader {
         return filteredData;
     }
 
-
+    // Load Cards
     loadCards() {
         try {
             // Clear the existing cards in the container
@@ -106,7 +103,6 @@ class CardReader {
                 const card = new Card(item);
 
                 // Append card to the container with a delay
-
                 $('.card-section').append(card.toHTML());
 
             });
@@ -121,12 +117,10 @@ class CardReader {
 // Card Object
 class Card {
     constructor(item) {
-
-        // Assuming your CSV has headers and data aligns with them
         this.data = item;
     }
 
-    // STRING Gets the colour of the card using sector
+    // Gets the colour of the card using sector
     getColor() {
         const sector = this.data.sector.toLowerCase();
 
@@ -144,53 +138,52 @@ class Card {
         }
     }
 
-    // STRING Get the Phase Icon
+    // Get the Phase Icon
     getPhaseIcon() {
         return this.getColor() + "/" + this.data.phaseTitle.replaceAll(" ", "").replace("&", "") + '.svg';
     }
 
-    // STRING Get AI Icon 1
+    // Get AI Icon 1
     getAI1Icon() {
         return this.getColor() + "/" + this.data.ai1.replaceAll(" ", "").replace("&", "") + '.svg';
     }
 
-    // STRING Get AI Icon 2
+    // Get AI Icon 2
     getAI2Icon() {
         return this.getColor() + "/" + this.data.ai2.replaceAll(" ", "").replace("&", "") + '.svg';
     }
 
-    // STRING Get AI Icon 3
+    // Get AI Icon 3
     getAI3Icon() {
         return this.getColor() + "/" + this.data.ai3.replaceAll(" ", "").replace("&", "") + '.svg';
     }
 
-    // STRING Get Background Image
+    // Get Background Image
     getImg() {
         return this.data.sector + '.svg'
     }
 
-    // BOOL Hide Icon 1 
+    // Hide Icon 1 
     hideIcon1() {
         return this.data.ai1 == '' ? true : false;
     }
 
-    // BOOL Hide Icon 2
+    // Hide Icon 2
     hideIcon2() {
         return this.data.ai2 == '' ? true : false;
     }
 
-    // BOOL Hide Icon 3
+    // Hide Icon 3
     hideIcon3() {
         return this.data.ai3 == '' ? true : false;
     }
 
-    // BOOL Hide GC
+    // Hide GC
     hideGC() {
         return this.data.challenge == '' ? true : false;
     }
 
-    // STRING returns HTML for the Star Ratings
-
+    // HTML for the Star Ratings
     starRating(n) {
         const fillStar = '<img src="images/icons/fill-star.svg" alt="fill-star.svg" />';
         const emptyStar = '<img src="images/icons/star.svg" alt="star.svg" />';
@@ -211,7 +204,7 @@ class Card {
     // Generate HTML for Card
 
     toHTML() {
-        // Convert card data to HTML and return
+
         return `
       <div class="card fadeIn card-${this.getColor()}-text-bg">
         <div class="card-content">
@@ -270,8 +263,7 @@ class Card {
             </div>
           </div>
         </div>
-      </div>			  
-			  
+      </div>			  			  
     `;
     }
 }
@@ -290,17 +282,12 @@ $(document).ready(function() {
 });
 
 // Setup filters
-
-
 function setupFilters(cardReader) {
-
-
 
     $('#searchBox').on('input', function() {
         cardReader.filters.searchText = $(this).val();
         cardReader.loadCards();
     });
-
 
     $('.sector-filter').on('change', 'input[type="checkbox"]', function() {
 
@@ -341,9 +328,7 @@ function setupFilters(cardReader) {
 
         cardReader.filters.challenge = $(this).val() == 'all' ? null : $(this).val();
         cardReader.loadCards();
-
     })
-
 
     $(".score").bind("change", function() {
 
@@ -351,19 +336,13 @@ function setupFilters(cardReader) {
 
         if (name == "Novelty") cardReader.filters.scoreNovelty = jQuery(this).val() == "all" ? null : jQuery(this).val();
         if (name == "AISuitability") cardReader.filters.scoreAI = jQuery(this).val() == "all" ? null : jQuery(this).val();
-
         if (name == "Impact") cardReader.filters.scoreImpact = jQuery(this).val() == "all" ? null : jQuery(this).val();
-
 
         // Load cards with the updated filters
         cardReader.loadCards();;
     });
 
-
-
 }
-
-
 
 $(document).ready(function() {
     // Add click event listener to dynamically added star divs
@@ -375,7 +354,6 @@ $(document).ready(function() {
 
         if (currentStar.hasClass('score-selected')) {
             // Clicked on a star with the score-selected class
-
             // Remove score-selected class from other buttons in the same row
             starContainer.find('.btn-star').removeClass('score-selected');
 
@@ -396,8 +374,6 @@ $(document).ready(function() {
     });
 });
 
-
-
 $(document).ready(function() {
 
     $('#toggler').click(function() {
@@ -405,13 +381,10 @@ $(document).ready(function() {
         $('#toggler').toggleClass("arrow-up");
     });
 
-
     $(function() {
         $('[data-bs-toggle="tooltip"]').tooltip();
     });
 });
-
-
 
 $(document).ready(function() {
     // Show/hide the button based on scroll position
@@ -431,19 +404,13 @@ $(document).ready(function() {
         return false;
     });
 
-
+    // Scrolls to top when toggle up is clicked	
     $('#toggler').click(function() {
-
         if ($(this).hasClass("arrow-down")) {
-
             $('html, body').animate({
                 scrollTop: 0
             }, 'slow');
             return false;
         }
-
-
     });
-
-
 });
