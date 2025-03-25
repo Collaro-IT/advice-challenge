@@ -1024,20 +1024,6 @@
 {
  "number": 74,
  "sector": "Energy",
- "phaseTitle": "Design & Planning",
- "title": "Knowledge extraction for network planning",
- "description": "New tranmsission lines can take up to 14 years to build, and much of this is in the planning and commissioning stage. AI can be used to help rapidly source information and fill in large portions of documentation to accelerate many components of the process, such as permitting and siting. Retrospective analysis can also identify causes of project failures.",
- "challenge": "GC2",
- "Impact": 3,
- "AISuitability": 2,
- "Novelty": 3,
- "ai1": "Language",
- "ai2": "Visual",
- "ai3": "Geospatial"
-},
-{
- "number": 75,
- "sector": "Energy",
  "phaseTitle": "Management & Operations",
  "title": "AI-driven dynamic line rating",
  "description": "Traditionally transmission lines, utilise static line ratings based on assumed weather conditions. This limits available capacity of the cables, reducing utilisation and underestimates safe operating limits. Utilising real-time weather and cable data, AI can optimise power transmission line capacity, enabling more efficient grid operation and renewable energy integration.",
@@ -1050,7 +1036,7 @@
  "ai3": "Geospatial"
 },
 {
- "number": 76,
+ "number": 75,
  "sector": "Energy",
  "phaseTitle": "Design & Planning",
  "title": "Sentiment analysis for stakeholder Feedback",
@@ -1064,7 +1050,7 @@
  "ai3": "OtherML"
 },
 {
- "number": 77,
+ "number": 76,
  "sector": "Energy",
  "phaseTitle": "Maintenance & Anomaly Detection",
  "title": "Gas pipe integrity modelling",
@@ -1078,7 +1064,7 @@
  "ai3": "Visual"
 },
 {
- "number": 78,
+ "number": 77,
  "sector": "Energy",
  "phaseTitle": "Maintenance & Anomaly Detection",
  "title": "Improved outage management in nuclear power stations",
@@ -1092,7 +1078,7 @@
  "ai3": "OtherML"
 },
 {
- "number": 79,
+ "number": 78,
  "sector": "Manufacturing",
  "phaseTitle": "Management & Operations",
  "title": "Coordinating and scheduling processes",
@@ -1106,7 +1092,7 @@
  "ai3": "OtherML"
 },
 {
- "number": 80,
+ "number": 79,
  "sector": "Manufacturing",
  "phaseTitle": "Management & Operations",
  "title": "AI-supported digital platforms",
@@ -1120,7 +1106,7 @@
  "ai3": "OtherML"
 },
 {
- "number": 81,
+ "number": 80,
  "sector": "Agriculture",
  "phaseTitle": "Design & Planning",
  "title": "Design of energy efficient crops",
@@ -1134,7 +1120,7 @@
  "ai3": "OtherML"
 },
 {
- "number": 82,
+ "number": 81,
  "sector": "Agriculture",
  "phaseTitle": "Management & Operations",
  "title": "Optimising controlled agricultural environments",
@@ -1148,7 +1134,7 @@
  "ai3": "OtherML"
 },
 {
- "number": 83,
+ "number": 82,
  "sector": "Agriculture",
  "phaseTitle": "Design & Planning",
  "title": "Energy efficient vertical farm design",
@@ -1162,7 +1148,7 @@
  "ai3": "OtherML"
 },
 {
- "number": 84,
+ "number": 83,
  "sector": "Built Environment",
  "phaseTitle": "Design & Planning",
  "title": "Upskilling heat pump installers",
@@ -1176,7 +1162,7 @@
  "ai3": "OtherML"
 },
 {
- "number": 85,
+ "number": 84,
  "sector": "Built Environment",
  "phaseTitle": "Incentives & Consumer Support",
  "title": "Improving perceptions of LCTs",
