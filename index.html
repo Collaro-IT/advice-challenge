@@ -58,7 +58,11 @@
                         <div class="form-check form-switch mb-2">
                           <input autocomplete="off" class="form-check-input built-environment-checkbox" type="checkbox" value="built environment" role="switch" id="flexSwitchCheckBuiltEnvironment" checked>
                           <label class="form-check-label" for="flexSwitchCheckBuiltEnvironment">Built Environment</label>
-                        </div>						
+                        </div>
+                        <div class="form-check form-switch mb-2">
+                          <input autocomplete="off" class="form-check-input transport-checkbox" type="checkbox" value="transport" role="switch" id="flexSwitchCheckTransport" checked>
+                          <label class="form-check-label" for="flexSwitchCheckTransport">Transport</label>
+                        </div>
                       </div>
                     </div>
                     <div class="col-lg-3 col-md-4">
@@ -142,24 +146,33 @@
                     </div>
                     <div class="col-lg-2 col-md-4">
                       <div class="container mt-3 gc-filter">
+
+  <div class="ai-tooltip" data-tooltip-anchor="bottom" data-tooltip="Filter by one of the overarching grand challenges.">
+
+
                         <label for="gradeCombobox" class="form-label">Grand Challenge</label>
+                         
                         <select class="form-select" id="gradeCombobox">
                           <option value="all" selected>All</option>
-                          <option value="gc1">Grand Challenge 1</option>
-                          <option value="gc2">Grand Challenge 2</option>
-                          <option value="gc3">Grand Challenge 3</option>
-                          <option value="gc4">Grand Challenge 4</option>
-                          <option value="gc5">Grand Challenge 5</option>
-                          <option value="gc6">Grand Challenge 6</option>
-                          <option value="gc7">Grand Challenge 7</option>
+                          <option value="gc1">1. Unlocking domestic decarbonisation</option>
+                          <option value="gc2">2. Enabling net zero infrastructure</option>
+                          <option value="gc3">3. Maximising flexibility in energy networks</option>
+                          <option value="gc4">4. Decarbonising manufacturing inputs</option>
+                          <option value="gc5">5. Improving manufacturing process efficiency</option>
+                          <option value="gc6">6. Optimising soil management</option>
+                          <option value="gc7">7. Minimising methane in agriculture</option>
+                          <option value="gc8">8. Optimising EV infrastructure</option>
+                          <option value="gc9">9. Decarbonising freight and trucking</option>
                         </select>
+		</div>
+
                       </div>
                     </div>
                     <div class="col-lg-5 col-md-4">
                       <div class="container mt-3 ai-capabilities-filter">
                         <div class="row">
                           <div class="ai-tooltip" data-tooltip-anchor="bottom" data-tooltip="The types of AI that are most applicable to a challenge (max 3).">
-                            <img src="./images/icons/help.svg">
+                            <img src="../images/icons/help.svg">
                             <b>AI Capabilities</b>
                           </div>
                           <div class="container mt-3">
@@ -169,7 +182,7 @@
                                   <div class="col-lg-12">
                                     <div class="d-flex flex-wrap">
                                       <div class="col-lg-3">
-                                        <img src="./images/icons/teal/Geospatial.svg">
+                                        <img src="../images/icons/teal/Geospatial.svg">
                                       </div>
                                       <div class="col-lg-9">
                                         <div class="form-check form-switch mb-2">
@@ -180,7 +193,7 @@
                                     </div>
                                     <div class="d-flex flex-wrap">
                                       <div class="col-lg-3">
-                                        <img src="./images/icons/teal/Optimisation.svg">
+                                        <img src="../images/icons/teal/Optimisation.svg">
                                       </div>
                                       <div class="col-lg-9">
                                         <div class="form-check form-switch mb-2">
@@ -191,7 +204,7 @@
                                     </div>
                                     <div class="d-flex flex-wrap">
                                       <div class="col-lg-3">
-                                        <img src="./images/icons/teal/Language.svg">
+                                        <img src="../images/icons/teal/Language.svg">
                                       </div>
                                       <div class="col-lg-9">
                                         <div class="form-check form-switch mb-2">
@@ -208,7 +221,7 @@
                                   <div class="col-lg-12">
                                     <div class="d-flex flex-wrap">
                                       <div class="col-lg-3">
-                                        <img src="./images/icons/teal/Visual.svg">
+                                        <img src="../images/icons/teal/Visual.svg">
                                       </div>
                                       <div class="col-lg-9">
                                         <div class="form-check form-switch mb-2">
@@ -219,7 +232,7 @@
                                     </div>
                                     <div class="d-flex flex-wrap">
                                       <div class="col-lg-3">
-                                        <img src="./images/icons/teal/TimeSeries.svg">
+                                        <img src="../images/icons/teal/TimeSeries.svg">
                                       </div>
                                       <div class="col-lg-9">
                                         <div class="form-check form-switch mb-2">
@@ -230,7 +243,7 @@
                                     </div>
                                     <div class="d-flex flex-wrap">
                                       <div class="col-lg-3">
-                                        <img src="./images/icons/teal/OtherML.svg">
+                                        <img src="../images/icons/teal/OtherML.svg">
                                       </div>
                                       <div class="col-lg-9">
                                         <div class="form-check form-switch mb-2">
@@ -278,7 +291,7 @@
             <li class="list-group-item"><b>Novelty:</b> Have many people already looked into this problem?</li>
           </ul>
           <br> <!-- Adding space between the list and the paragraph -->
-          <p class="card-text"  style="font-size: 14px;">The list is intended to be continually developed and updated with new challenges. If you would like to add an AI challenge in these sectors please get in contact or add directly by submitting an issue via our <a target="blank" href="https://github.com/alan-turing-institute/ADViCE/issues/new/choose">issues page</a>.</p>
+          <p class="card-text"  style="font-size: 14px;">The list is intended to be continually developed and updated with new challenges. If you would like to add an AI challenge in these sectors please get in contact or add directly by submitting an issue via our <a target="blank" href="https://github.com/Collaro-IT/advice-challenge/issues/new?assignees=&labels=AI+Challenge&projects=&template=ai_challange_template.md&title=">issues page</a>.</p>
         </div>
       </div>
     </div>

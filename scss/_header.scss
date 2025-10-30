@@ -125,6 +125,15 @@
       background-color: $green-bg;
     }
   }
+
+  .transport-checkbox {
+    &:checked {
+      background-color: $purple;
+    }
+    &:not(:checked) {
+      background-color: $purple-bg;
+    }
+  }
 }
 
 /* Default button style */
@@ -181,6 +190,9 @@
 
   .pink {
     background-color: $pink;
+  }
+  .purple {
+    background-color: $purple;
   }
 }
 

@@ -40,7 +40,20 @@
       background-color: $pink-bg;
     }
   }
+
+  // Purple theme
+  &-purple {
+    &-bg {
+      background-color: $purple;
+    }
+    &-text-bg {
+      background-color: $purple-bg;
+    }
+  }
+  
 }
+
+  
 
 @keyframes slideIn {
   from {
